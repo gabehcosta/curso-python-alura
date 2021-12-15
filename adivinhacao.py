@@ -3,7 +3,9 @@ print("Seja Bem vindo ao jogo de Adivinhação!")
 print("**************************************")
 
 num_secreto = 13
+
 chute = int(input("Digite o seu chute: "))
+print("Você digitou o número:", chute)
 
 acertou = (chute == num_secreto)
 maior   = (chute > num_secreto)
