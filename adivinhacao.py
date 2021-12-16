@@ -12,7 +12,7 @@ while(total_tentativas == 0):
     print("Escolha um nível de dificuldade:")
     print("(1) Fácil  (2) Médio  (3) Difícil")
 
-    nivel = input("Nível escolhido: ")
+    nivel = int(input("Nível escolhido: "))
     facil   = (nivel == 1)
     medio   = (nivel == 2)
     dificil = (nivel == 3)
