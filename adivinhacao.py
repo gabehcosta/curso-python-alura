@@ -45,12 +45,19 @@ for tentativa_atual in range(1, total_tentativas + 1):
 
     if(acertou):
         print("Parabéns, você acertou!!!\n")
+        print("Score: {} pontos".format(pontos))
         break
     else:
         if(maior):
             print("Você Errou! O chute foi MAIOR que o número secreto\n")
         elif(menor):
             print("Você Errou! O chute foi MENOR que o número secreto\n")
-        tentativa_atual += 1
+
+        pontos_perdidos = abs(num_secreto - chute)
+        pontos -= pontos_perdidos
+
+        tentativa_atual += 1      
+        if(tentativa_atual > total_tentativas):
+            print("O número secreto era {}".format(num_secreto))
 
 print("Fim do Jogo!")
