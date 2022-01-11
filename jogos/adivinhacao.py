@@ -1,63 +1,68 @@
 import random
 
-print("**************************************")
-print("Seja Bem vindo ao jogo de Adivinhação!")
-print("**************************************")
+def jogar():
 
-num_secreto = random.randrange(1,101)
-total_tentativas = 0
-pontos = 1000
+    print("**************************************")
+    print("Seja Bem vindo ao jogo de Adivinhação!")
+    print("**************************************")
 
-while(total_tentativas == 0):
-    print("Escolha um nível de dificuldade:")
-    print("(1) Fácil  (2) Médio  (3) Difícil")
+    num_secreto = random.randrange(1,101)
+    total_tentativas = 0
+    pontos = 1000
 
-    nivel = int(input("Nível escolhido: "))
-    facil   = (nivel == 1)
-    medio   = (nivel == 2)
-    dificil = (nivel == 3)
+    while(total_tentativas == 0):
+        print("Escolha um nível de dificuldade:")
+        print("(1) Fácil  (2) Médio  (3) Difícil")
 
-    if(facil):
-        total_tentativas = 20
-    elif(medio):
-        total_tentativas = 10
-    elif(dificil):
-        total_tentativas = 5
-    else:
-        print("Escolha um nível válido!")
+        nivel = int(input("Nível escolhido: "))
+        facil   = (nivel == 1)
+        medio   = (nivel == 2)
+        dificil = (nivel == 3)
 
-for tentativa_atual in range(1, total_tentativas + 1):
+        if(facil):
+            total_tentativas = 20
+        elif(medio):
+            total_tentativas = 10
+        elif(dificil):
+            total_tentativas = 5
+        else:
+            print("Escolha um nível válido!")
 
-    print("Tentativa {} de {}".format(tentativa_atual,total_tentativas))
+    for tentativa_atual in range(1, total_tentativas + 1):
 
-    chute = int(input("Digite um número entre 1 e 100: "))
-    print("Você digitou o número", chute)
+        print("Tentativa {} de {}".format(tentativa_atual,total_tentativas))
 
-    numero_invalido = (chute < 1 or chute > 100)
+        chute = int(input("Digite um número entre 1 e 100: "))
+        print("Você digitou o número", chute)
 
-    if(numero_invalido):
-        print("Você deve inserir um número entre 1 e 100!!!\n")
-        continue
+        numero_invalido = (chute < 1 or chute > 100)
 
-    acertou = (chute == num_secreto)
-    maior   = (chute > num_secreto)
-    menor   = (chute < num_secreto)
+        if(numero_invalido):
+            print("Você deve inserir um número entre 1 e 100!!!\n")
+            continue
 
-    if(acertou):
-        print("Parabéns, você acertou!!!\n")
-        print("Score: {} pontos".format(pontos))
-        break
-    else:
-        if(maior):
-            print("Você Errou! O chute foi MAIOR que o número secreto\n")
-        elif(menor):
-            print("Você Errou! O chute foi MENOR que o número secreto\n")
+        acertou = (chute == num_secreto)
+        maior   = (chute > num_secreto)
+        menor   = (chute < num_secreto)
 
-        pontos_perdidos = abs(num_secreto - chute)
-        pontos -= pontos_perdidos
+        if(acertou):
+            print("Parabéns, você acertou!!!\n")
+            print("Score: {} pontos".format(pontos))
+            break
+        else:
+            if(maior):
+                print("Você Errou! O chute foi MAIOR que o número secreto\n")
+            elif(menor):
+                print("Você Errou! O chute foi MENOR que o número secreto\n")
 
-        tentativa_atual += 1      
-        if(tentativa_atual > total_tentativas):
-            print("O número secreto era {}".format(num_secreto))
+            pontos_perdidos = abs(num_secreto - chute)
+            pontos -= pontos_perdidos
 
-print("Fim do Jogo!")
+            tentativa_atual += 1      
+            if(tentativa_atual > total_tentativas):
+                print("O número secreto era {}".format(num_secreto))
+
+    print("Fim do Jogo!")
+
+if(__name__ == "__main__"):
+    jogar()
