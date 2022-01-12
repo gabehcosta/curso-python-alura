@@ -1,7 +1,7 @@
 def jogar():
 
     print("**************************************")
-    print("   Seja Bem vindo ao jogo de Forca!   ")
+    print("*  Seja Bem vindo ao jogo de Forca!  *")
     print("**************************************")
 
     print("\nFim de Jogo!")

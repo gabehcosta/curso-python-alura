@@ -4,7 +4,7 @@ import forca
 def executar():
 
     print("**************************************")
-    print("           Seja Bem vindo!            ")
+    print("*          Seja Bem vindo!           *")
     print("**************************************")
 
     print("Escolha um jogo:")

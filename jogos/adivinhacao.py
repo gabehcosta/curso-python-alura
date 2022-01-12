@@ -2,9 +2,9 @@ import random
 
 def jogar():
 
-    print("**************************************")
-    print("Seja Bem vindo ao jogo de Adivinhação!")
-    print("**************************************")
+    print("******************************************")
+    print("* Seja Bem vindo ao jogo de Adivinhação! *")
+    print("******************************************")
 
     num_secreto = random.randrange(1,101)
     total_tentativas = 0
