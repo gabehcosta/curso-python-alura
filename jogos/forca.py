@@ -10,7 +10,16 @@ def jogar():
     enforcou = False
 
     while(not acertou and not enforcou):
-        print("Continue jogando...")
+
+        chute = input("Digite uma letra: ")
+        chute = chute.strip()
+
+        index = 0
+        for letra in palavra_secreta:
+            if(chute.upper() == letra.upper()):
+                print("Letra {} foi encontrada na posição {}".format(letra, index))
+            
+            index += 1
 
     print("\nFim de Jogo!")
 
