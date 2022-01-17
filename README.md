@@ -1,3 +1,3 @@
-# curso-python-alura
+# Projetos do Curso de Python da Alura
 
-Projeto simples de um jogo de advinhação do curso de "Python: parte 1" da Alura Cursos Online
+Este reposítório contém os arquivos dos projetos desenvolvidos no curso de Python 3 parte 1: "Introdução à nova versão da linguagem" da Alura Cursos Online.
