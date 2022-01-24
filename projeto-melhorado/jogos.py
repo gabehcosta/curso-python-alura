@@ -21,10 +21,10 @@ def executar():
                 num_inteiro = True
                 if(escolha == 1):
                     print("Você escolheu o jogo de Adivinhação!")
-                    #adivinhacao.executar()
+                    adivinhacao.executar()
                 elif(escolha == 2):
                     print("Você escolheu o jogo de Forca!")
-                    #forca.executar()
+                    forca.executar()
                 else:
                     print("Até a próxima, volte sempre!!")
                     break
