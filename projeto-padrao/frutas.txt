@@ -8,3 +8,8 @@ uva
 pera
 mamao
 tomate
+goiaba
+caju
+groselha
+amora
+damasco
