@@ -1,7 +1,6 @@
-#Arquivo de seleção dos jogos de Forca e Adivinhação.
-
-#Import dos arquivos dos jogos
 import adivinhacao, forca
+
+#######################################################################
 
 #Função Principal
 def executar():
@@ -21,10 +20,10 @@ def executar():
                 num_inteiro = True
                 if(escolha == 1):
                     print("Você escolheu o jogo de Adivinhação!")
-                    #adivinhacao.executar()
+                    adivinhacao.executar()
                 elif(escolha == 2):
                     print("Você escolheu o jogo de Forca!")
-                    #forca.executar()
+                    forca.executar()
                 else:
                     print("Até a próxima, volte sempre!!")
                     break
@@ -39,6 +38,7 @@ def executar():
             num_inteiro = False
             escolha = solicita_entrada()
 
+#######################################################################
 
 #Funções
 def mensagem_boas_vindas():
@@ -60,7 +60,8 @@ def converte_str_para_int(valor):
     except ValueError:
         pass
 
-    
+#######################################################################    
+
 #Verificação de abertura do programa
 if(__name__ == "__main__"):
     executar()
